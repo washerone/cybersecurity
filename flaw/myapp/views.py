@@ -67,7 +67,6 @@ def dashboard(request):
 
 def load_data(request):
     # Flaw 6: Insecure Deserialization
-    #Data may contains pickled objects
     data = request.POST.get('data') 
     try:
         loaded_data = pickle.loads(data)
